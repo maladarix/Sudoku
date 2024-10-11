@@ -1,0 +1,152 @@
+.flex-separator {
+  display: flex;
+  height: 700px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.tableau {
+  flex: 5;
+  margin-left: 100px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-template-rows: repeat(9,1fr);
+  gap: 1px;
+  width: 700px;
+  height: 700px;
+  background-color: #000000;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  font-size: 48px;
+  border: 1px solid #000000;
+}
+
+.game .cell:nth-child(3n+3) {
+  border-right: 3px solid #000000;
+}
+
+.game .cell:nth-child(3n+1) {
+  border-left: 3px solid #000000;
+}
+
+.game .cell:nth-child(n+19):nth-child(-n+27),
+.game .cell:nth-child(n+46):nth-child(-n+54),
+.game .cell:nth-child(n+73):nth-child(-n+81) {
+  border-bottom: 3px solid #000000;
+}
+
+.game .cell:nth-child(n+1):nth-child(-n+9),
+.game .cell:nth-child(n+28):nth-child(-n+36),
+.game .cell:nth-child(n+55):nth-child(-n+63) {
+  border-top: 3px solid #000000;
+}
+
+.numbers {
+  margin-top: 110px;
+  margin-left: 200px;
+  flex: 5;
+}
+
+.digitSelector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  height: 350px;
+  width: 350px;
+  gap: 10px;
+}
+
+.userInteraction {
+  width: fit-content;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.digit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 48px;
+  background-color: #a6e7e7;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  height: 50px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(255, 91, 91);
+  font-size: 48px;
+}
+
+.difficultyBtn{
+  margin-bottom: 10px;
+  display: flex; 
+  width: 100%;
+  gap: 13px;
+  justify-content: center;
+}
+
+.difficultyBtn > button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #c5c5c5;
+  border-radius: 10px;
+  border: 1px black solid;
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.difficultyBtn > button:hover {
+  background-color: #b4b4b4;
+}
+
+.reset:hover {
+  background-color: rgb(255, 70, 70);
+}
+
+.digit:hover {
+  background-color: #6effff;
+}
+
+.cell:hover:not(.clicked):not(.blocked) {
+  background-color:#a3a3a3 ;
+}
+
+.blocked {
+  background-color: #e7e7e7;
+}
+
+.clicked {
+  background-color: #a6e7e7;
+}
+
+.error {
+  color: red;
+}
+
+.selected {
+  background-color: greenyellow !important;
+}
