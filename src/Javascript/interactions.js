@@ -49,11 +49,11 @@ reset.addEventListener('click', function() {
       break;
 
     case "Intermédiaire":
-      generateSudoku(60)
+      generateSudoku(50)
       break
 
     case "Difficile":
-      generateSudoku(70)
+      generateSudoku(60)
       break
   
     default:
